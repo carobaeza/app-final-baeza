@@ -1,0 +1,52 @@
+
+<form [formGroup]='envioForm'>
+    <h1>Formulario de Envio</h1>
+    <div class="datosEnvio" >
+
+        <mat-form-field appearance="outline">
+            <mat-label>Nombre Remitente</mat-label>
+                <input matInput type="text" formControlName="nombre">          
+        </mat-form-field>
+        
+        <br>
+        <mat-form-field appearance="outline">
+            <mat-label>Direccion remitente</mat-label>
+                <input matInput type="text" formControlName="direccion">          
+        </mat-form-field>
+        <br>
+
+        <br>
+        <mat-form-field appearance="outline">
+            <mat-label>Nombre Destinatario</mat-label>
+                <input matInput type="text" formControlName="destinatario">          
+        </mat-form-field>
+        <br>
+
+        <br>
+        <mat-form-field appearance="outline">
+            <mat-label>Direccion Destinatario</mat-label>
+                <input matInput type="text" formControlName="direDestinatario">          
+        </mat-form-field>
+        <br>
+
+        <mat-form-field appearance="outline">
+            <mat-label>Descripcion</mat-label>
+                <input matInput type="text" formControlName="descripcion">
+        </mat-form-field>
+        <br>
+
+         <br>
+         <mat-form-field appearance="fill">
+            <mat-label>Fecha </mat-label>
+            <input matInput [matDatepicker]="fecha" formControlName="fecha">
+            <mat-datepicker-toggle matSuffix [for]="fecha"></mat-datepicker-toggle>
+            <mat-datepicker #fecha></mat-datepicker>
+          </mat-form-field>       
+    
+
+        <button mat-raised-button (click)="cargarEnvio()">Guardar</button>
+       
+    </div>
+    
+</form>
+  

@@ -6,8 +6,8 @@ import { AppComponent } from './app.component';
 
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { AlumnoComponent } from './modules/alumno/alumno/alumno.component';
-import { MuestraAlumnoComponent } from './modules/alumno/muestra-alumno/muestra-alumno.component';
+import { EnvioComponent } from './modules/envio/envio/envio.component';
+import { MuestraEnvioComponent } from './modules/envio/muestra-envio/muestra-envio.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { HttpClientModule } from '@angular/common/http';
@@ -18,13 +18,13 @@ import {MatTableModule} from '@angular/material/table';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatSelectModule} from '@angular/material/select';
 import {MatDatepickerModule} from '@angular/material/datepicker';
-import { AlumnoService } from './modules/alumno/servicios/alumno.service';
+import { EnvioService } from './modules/envio/servicios/envio.service';
 
 @NgModule({
   declarations: [
     AppComponent,
-    AlumnoComponent,
-    MuestraAlumnoComponent
+    EnvioComponent,
+    MuestraEnvioComponent
   ],
   imports: [
     BrowserModule,
@@ -42,7 +42,7 @@ import { AlumnoService } from './modules/alumno/servicios/alumno.service';
     MatDatepickerModule,
     MatNativeDateModule
   ],
-  providers: [AlumnoService],
+  providers: [EnvioService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
